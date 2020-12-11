@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dark_bg"
+    android:layout_margin="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/quiz_card"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="6dp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/list_image"
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/placeholder_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/image_cover_view"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:translationZ="10dp"
+        android:background="@drawable/image_cover"
+        app:layout_constraintBottom_toBottomOf="@id/quiz_card"
+        app:layout_constraintEnd_toEndOf="@id/quiz_card"
+        app:layout_constraintStart_toStartOf="@id/quiz_card"/>
+
+    <TextView
+        android:id="@+id/list_title"
+        style="@style/text_stroke_white"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Quizz title"
+        android:fontFamily="@font/font2"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_card" />
+
+    <TextView
+        android:id="@+id/list_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Quizz Description"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_title" />
+
+    <TextView
+        android:id="@+id/list_difficulty"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Difficulty"
+        style="@style/text_stroke_white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_desc" />
+
+    <Button
+        android:id="@+id/list_btn"
+        android:background="@drawable/primary_btn_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/font22"
+        android:layout_marginBottom="16dp"
+        android:text="Start Quizz"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_difficulty" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
